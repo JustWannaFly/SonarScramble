@@ -7,7 +7,7 @@ using namespace sf;
 Submarine::Submarine(Vector2f* position) {
 	m_position.x = position->x;
 	m_position.y = position->y;
-    m_speed = 40;
+    m_speed = 75;
 
 	m_texture.loadFromFile("resources/placeholders/Aquatic0.png" , IntRect(48, 17, 16, 16));
 	
@@ -15,6 +15,23 @@ Submarine::Submarine(Vector2f* position) {
 }
 
 void Submarine::update(float delta) {
+    m_velocity.x = 0;
+    m_velocity.y = 0;
+
     int distance = m_speed * delta;
-    m_position.x += distance;
+
+    if (m_commands != nullptr) {
+        if (m_commands->right) {
+            m_velocity.x += distance;
+        }
+        if (m_commands->left) {
+            m_velocity.x -= distance;
+        }
+        if (m_commands->up) {
+            m_velocity.y -= distance;
+        }
+        if (m_commands->down) {
+            m_velocity.y += distance;
+        }
+    }
 }

@@ -33,8 +33,8 @@ void Engine::start() {
 			if (event.type == Event::Closed)
 				m_window.close();
 		}
-		Commands commands = getInput();
-		if (commands.close) {
+		getInput();
+		if (m_commands.close) {
 			m_window.close();
 		}
 

@@ -34,6 +34,12 @@
     <Filter Include="Header Files\Map">
       <UniqueIdentifier>{67d24a48-f858-4c6d-9fe6-62bca87bc109}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{ec990692-e3d3-41b9-ad1c-67a5305a0351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{f90e03e4-a737-4cbe-ba9e-1bcb095bdaa6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

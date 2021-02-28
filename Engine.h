@@ -15,7 +15,9 @@ private:
 	sf::Sprite m_backgroundSprite;
     sf::Texture m_backgroundTexture;
 
-	Commands getInput();
+    Commands m_commands;
+
+	void getInput();
 	void update(float deltaSeconds);
 	void draw();
 
