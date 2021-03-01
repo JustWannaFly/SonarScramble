@@ -1,17 +1,17 @@
 #include "stdafx.h"
 #include "Submarine.h"
 #include "Entity.h"
+#include "TextureRegistry.h"
 
 using namespace sf;
 
 Submarine::Submarine(Vector2f* position) {
 	m_position.x = position->x;
 	m_position.y = position->y;
-    m_speed = 75;
-
-	m_texture.loadFromFile("resources/placeholders/Aquatic0.png" , IntRect(48, 17, 16, 16));
+    m_speed = 175;
 	
-	m_sprite.setTexture(m_texture);
+	m_sprite.setTexture(*TextureRegistry::getInstance()->getTexture(TextureRegistry::Aquatic0));
+    m_sprite.setTextureRect(IntRect(81, 17, 16, 16));
 }
 
 void Submarine::update(float delta) {

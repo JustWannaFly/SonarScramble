@@ -6,10 +6,10 @@ private:
 public:
 	Commands();
     void reset();
-	bool close;
+	bool close = false;
     
-    bool up;
-    bool down;
-    bool left;
-    bool right;
+    bool up = false;
+    bool down = false;
+    bool left = false;
+    bool right = false;
 };

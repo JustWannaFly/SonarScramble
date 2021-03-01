@@ -3,6 +3,7 @@
 #include "Commands.h"
 #include "Entity.h"
 #include <vector>
+#include "TextureRegistry.h"
 
 class Engine {
 private:
@@ -12,8 +13,8 @@ private:
     sf::Vector2i m_resolution;
     sf::RenderWindow m_window;
 
+    std::shared_ptr<TextureRegistry> pTextures = nullptr;
 	sf::Sprite m_backgroundSprite;
-    sf::Texture m_backgroundTexture;
 
     Commands m_commands;
 

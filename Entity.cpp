@@ -4,6 +4,7 @@
 using namespace sf;
 
 Entity::Entity() {
+    m_commands = nullptr;
 }
 
 void Entity::update(float delta) {

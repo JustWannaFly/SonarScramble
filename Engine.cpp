@@ -4,6 +4,7 @@
 #include <thread>
 #include "Submarine.h"
 #include "Entity.h"
+#include "TextureRegistry.h"
 
 using namespace sf;
 using namespace std;
@@ -12,8 +13,9 @@ Engine::Engine() {
 	m_fps = 30;
 	m_resolution = Vector2i(1280, 720);
 
-	bool success = m_backgroundTexture.loadFromFile("resources/placeholders/Logo.png");
-	m_backgroundSprite.setTexture(m_backgroundTexture);
+    pTextures = TextureRegistry::getInstance();
+
+	m_backgroundSprite.setTexture(*pTextures->getTexture(TextureRegistry::DawnHack));
 
 	m_window.create(VideoMode(m_resolution.x, m_resolution.y), "Sonar Scramble");
 

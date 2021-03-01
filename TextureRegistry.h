@@ -6,18 +6,19 @@
 class TextureRegistry {
 public:
 
-    static TextureRegistry* getInstance();
+    static std::shared_ptr<TextureRegistry> getInstance();
 
     enum textures {
-        Aquatic0
+        Aquatic0,
+        DawnHack,
     };
-	sf::Texture getTexture(textures texture);
+    std::shared_ptr<sf::Texture> getTexture(textures texture);
 
 private:
 	TextureRegistry();
-    static TextureRegistry* m_instance;
+    static std::shared_ptr<TextureRegistry> p_instance;
 
-	std::map<textures, sf::Texture> m_textureMap;
+    std::map<textures, std::shared_ptr<sf::Texture>> m_textureMap;
     std::map<textures, std::string> m_textureFiles;
 	bool loadTexture(textures texture);
 };

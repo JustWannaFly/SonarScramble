@@ -190,6 +190,7 @@
     </ClCompile>
     <ClCompile Include="Submarine.cpp" />
     <ClCompile Include="TextureRegistry.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Update.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

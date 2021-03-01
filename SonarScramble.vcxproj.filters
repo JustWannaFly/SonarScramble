@@ -40,6 +40,9 @@
     <Filter Include="Header Files\Utilities">
       <UniqueIdentifier>{f90e03e4-a737-4cbe-ba9e-1bcb095bdaa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Map">
+      <UniqueIdentifier>{dc35feb2-cf0d-4afd-9cc5-3babc8e40484}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -100,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="TextureRegistry.cpp">
       <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source Files\Map</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

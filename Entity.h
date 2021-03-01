@@ -5,7 +5,6 @@
 class Entity {
 protected:
     Commands* m_commands;
-	sf::Texture m_texture;
     sf::Sprite m_sprite;
     sf::Vector2f m_position;
     sf::Vector2i m_velocity;
